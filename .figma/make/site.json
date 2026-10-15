@@ -1,0 +1,10 @@
+{
+  "description": "This platform enables ecological regulators and researchers to monitor new water pollutants, analyze data, and track environmental incidents effectively.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
