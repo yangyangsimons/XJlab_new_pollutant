@@ -35,6 +35,7 @@ import { SITES, SiteType } from './geo'
 import AnalysisPage from './components/AnalysisPage'
 import TracePage from './components/TracePage'
 import OpsPage from './components/OpsPage'
+import logo from '@/assets/logo.png'
 
 type Page = 'home' | 'sites' | 'analysis' | 'trace' | 'ops' | 'event'
 
@@ -158,11 +159,22 @@ export default function App() {
   return (
     <ScaleContainer>
       <div className='w-full h-full p-6 flex flex-col gap-4 bg-brand-bg'>
-        <header className='h-16 shrink-0 flex items-center justify-between'>
-          <h1 className='text-[32px] leading-10 font-bold tracking-wide'>
-            湘江实验室新污染物AI智能监测研判平台
-          </h1>
-          <div className='text-[18px] leading-6 text-ink-sub tabular-nums'>
+        <header className='h-16 shrink-0 flex items-center justify-between gap-6'>
+          {/* 左侧：Logo + 平台标题 */}
+          <div className='flex items-center gap-3 min-w-0'>
+            <img
+              src={logo}
+              alt=''
+              className='w-55 h-30 object-contain shrink-0'
+            />
+
+            <h1 className='text-[32px] leading-10 font-bold tracking-wide'>
+              湘江实验室新污染物AI智能监测研判平台
+            </h1>
+          </div>
+
+          {/* 右侧：当前时间 */}
+          <div className='shrink-0 whitespace-nowrap text-[18px] leading-6 text-ink-sub tabular-nums'>
             当前时间 <span className='text-ink'>{formatNow(now)}</span>
           </div>
         </header>

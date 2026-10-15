@@ -2,7 +2,6 @@ import { defineConfig, type HtmlTagDescriptor, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
-
 import siteConfiguration from './.figma/make/site.json'
 
 
@@ -89,7 +88,7 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
   const title = config.title ?? "湘江实验室新污染物监测平台"
   const description = config.description ?? ''
   // Imported HTML keeps its own favicon; new Makes default to the Make product icon.
-  const favicon = config.icons?.icon ?? '/favicon.svg'
+  const favicon = config.icons?.icon ?? '/favicon.ico'
   const socialImage = config.openGraph?.image ?? ''
   const language = sanitizeHtmlValue(config.language) || 'en'
   const googleAnalyticsId = sanitizeHtmlValue(config.analytics?.googleAnalyticsId)
